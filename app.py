@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from joblib import load
 
+
 from use import preprocess, clean_output
 
 app = Flask(__name__)
@@ -14,8 +15,9 @@ def hello():
 
 # route api pour requête get
 
-"""
 pipe = load('trained_use_logreg.joblib')
+
+
 
 @app.route("/api/text=<text>")
 def my_api(text) :
@@ -29,7 +31,7 @@ def my_api(text) :
 		"tags" : output_clean
 	}
 
-	return jsonify(dictionnaire)"""
+	return jsonify(dictionnaire)
 
 if __name__ == "__main__" :
 	app.run(debug = True)
